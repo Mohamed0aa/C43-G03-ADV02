@@ -8,7 +8,7 @@ namespace Demo
     {
         static void Main(string[] args)
         {
-            #region vedio 2
+            #region vedio 2 non Genearic collection
             ArrayList num = new ArrayList();
 
             Console.WriteLine($"nubers ={num.Count} sizeof ={num.Capacity}");
@@ -71,9 +71,36 @@ namespace Demo
 
             int even_num =number.FindLast(n =>n%2==0);
             int even_index = number.FindLastIndex(n => n % 2 == 0);
-
-            #endregion,
             #endregion
+            #endregion
+
+            #region vedio 4
+
+            #region stack
+            Stack<int> stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Pop();//show and remove
+            stack.Peek();//show without remove
+            stack.TryPop(out int value);
+            #endregion
+
+            #region queue
+            Queue<int> queue = new Queue<int>();
+            queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);   
+            queue.Enqueue(4);
+            queue.Enqueue(5);
+            queue.Dequeue();
+            queue.Peek();
+
+
+            #endregion
+            #endregion
+
         }
     }
 }
